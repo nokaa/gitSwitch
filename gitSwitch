@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [ -f ~/.config/git/$1 ]; then
+        cp ~/.config/git/$1 ~/.gitconfig
+else
+        echo "Invalid name:" $1;
+fi
