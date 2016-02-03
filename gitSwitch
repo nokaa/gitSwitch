@@ -6,14 +6,8 @@ function print_help() {
         gitSwitch help           Print this help message"
 }
 
-if [ "$XDG_CONFIG_HOME" == "" ]; then
-        CONFIG_DIR=~/.config
-else
-        CONFIG_DIR=$XDG_CONFIG_HOME
-fi
-
-if [ -f $CONFIG_DIR/gitSwitch/$1 ]; then
-        cp $CONFIG_DIR/gitSwitch/$1 ~/.gitconfig
+if [ -f ~/.config/gitSwitch/$1 ]; then
+        cp ~/.config/gitSwitch/$1 ~/.gitconfig
 elif [ "$1" == "help" ]; then
         print_help;
 else
