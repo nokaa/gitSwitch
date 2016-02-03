@@ -1,9 +1,9 @@
 #!/bin/bash
 
 function print_help() {
-        echo "USAGE:"
-        echo $0 "<NAME>         Switch the current git profile with <NAME>"
-        echo $0 "help           Print this help message"
+        echo "USAGE:
+        gitSwitch <NAME>         Switch the current git profile with <NAME>
+        gitSwitch help           Print this help message"
 }
 
 if [ "$XDG_CONFIG_HOME" == "" ]; then
